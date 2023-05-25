@@ -33,6 +33,13 @@ class VendingMachine
 end
 
 class User
+  def initialize(money)
+    @money = money
+  end
+
+  def money
+    @money
+  end
 end
 
 puts "商品を用意してください。"
@@ -47,3 +54,7 @@ end
 
 vending_machine = VendingMachine.new(drinks)
 vending_machine.show_drinks
+
+puts "あなたはお客さんです。投入金額を決めてください。"
+money = gets.to_i
+user = User.new(money)
